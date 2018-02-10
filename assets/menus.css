@@ -1,0 +1,130 @@
+.clearfix{
+	display: block;
+	clear:both;
+}
+.container{
+	width:90%;
+	margin:auto;
+}
+body { height:999px;color: #777; font-size: 16px; font-family: sans-serif; margin: 0; padding: 0; direction: rtl}
+h1 { margin: 0px 0px 1em 0px; color: #076d6f; font-size: 1.7em; }
+h3 { margin: 0px 0px 1.5em 0px; color: #339999; font-size: 1.1em; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
+a { color: #00aaff; text-decoration: none; }
+
+header { height: 260px; background: #eee url(banner.jpg) no-repeat center; background-size: cover; margin-bottom: 50px; position: relative; }
+header a.logo { position: absolute; display: block; width: 154px; height: 57px; background: url("http://resala.org/sites/all/themes/resala/images/logo.png") no-repeat 0 0; background-size: contain; z-index: 1; top: 15px; right: 20px; }
+header a.logo span {display: none; font-size: 2em; font-weight: bolder; line-height: .5; letter-spacing: 1px;text-transform: uppercase; color: #fff; font-family: tahoma}
+
+article { width: 70%; float: right; margin-bottom: 75px; }
+article div { padding: 0px 40px 0px 40px; border-left: 1px solid #555; }
+aside { width: 30%; float: right; }
+aside div { padding: 0px 40px 0px 40px; }
+
+nav { background-color: rgba(0,0,0,.6); position: relative; padding: 45px 210px 0px 0px;}
+
+/* Add menu rules here */
+nav ul { list-style-type: none; margin: 0; padding: 0; }
+
+nav ul::after { content: ""; display: block; clear: both; }
+nav ul li:hover { background-color: rgba(0, 102, 102, .8); }
+nav ul li:hover > ul { display: block; }
+
+nav ul li a{display: inline-block; color: #fff; padding: 10px 20px; text-decoration: none; width: 125px;}
+nav ul li a:hover {background-color: #339999 ; text-shadow: 1px 1px 2px #333}
+
+nav ul ul { display: none; position: absolute; top:100%; background-color: rgba(0, 102, 102, .8); }
+nav ul ul li { position: relative; }
+nav ul ul ul { right: 100%; top: 0; }
+
+/* top level */
+nav > ul { padding-right: 35px; }
+nav > ul > li { float: right; background: rgba(0,0,0,.6); margin: 0px 10px} 
+nav > ul > li > a { padding: 10px 20px 15px 20px; width:auto; text-shadow: 1px 1px 2px #333}
+
+section.departments { text-align:center; background-color:#399;padding: 60px 0;}
+section.departments h2{ margin: 0 auto 2em auto ; padding:20px ;border-bottom:5px solid rgba(40,40,100,.8);width:200px; color:#fff; text-shadow: 1px 2px 1px #333}
+section.departments > .container > div {
+	display: inline-block;
+	background-color: #333;
+	color: #fff;
+	padding:30px 60px;
+	width:160px;
+	margin: 10px 20px;
+}
+section.departments .computer{
+		border-bottom:5px solid  #f69b13;
+}
+section.departments .hd{
+		border-bottom:5px solid  #d71438;
+}
+
+section.departments .lang{
+		border-bottom:5px solid  #2cc029;
+}
+
+section.coursetable{
+	background-color:#eee;
+	padding:60px 0;
+	color:#333;
+}
+section.coursetable .course{
+	padding-right: 20px;
+	border-right:5px solid #f69b13;
+}
+
+section.coursetable .course h4{
+	background-color: #399;
+	position: relative;
+	left:20px;
+	margin-bottom: 5px;
+	padding:10px;
+	color:#fff;
+	text-shadow: 1px 1px 1px #333
+}
+section.coursetable  .entryLevel,
+section.coursetable  .intermediateLevel,
+section.coursetable  .advancedLevel{
+	font-size: .8em;
+	text-shadow: none;
+	background-color: #333;
+	padding:6px 10px;
+}
+.entryLevel{ color: gold }
+.intermediateLevel{ color: #f41717; }
+.advancedLevel{ color: #6c6cff; }
+section.coursetable .status1{color: green; }
+section.coursetable .status2{color: blue; }
+section.coursetable .status3{color: red; }
+
+section.coursetable .listTitle {
+	padding:5px 10px;
+	border-right: 3px solid #399;
+	display: inline-block;
+	margin-top: 25px;
+	cursor: pointer;
+	background-color:#fff;
+}
+
+section.coursetable ul {
+	list-style: none;
+	display: none;
+}
+
+section.coursetable ul li {
+	border-right: 3px solid #444;
+	padding-right: 10px;
+	margin: 5px 0;
+}
+
+@media screen and (max-width: 750px) {
+	
+	header a.logo { width: 120px; height: 44px; }
+	article { width: 100%; float: none; margin-bottom: 40px; }
+	article div { margin: 0px 40px; padding: 0px 0px 30px 0px; border-left: none; border-bottom: 1px solid #555; }
+	aside { width: 100%; float: none; }
+
+	nav { padding: 70px 0 0 10px; }
+	nav > ul {padding-left: 0; padding-right: :20px; }
+	nav > ul > li > a { padding: 8px 12px 10px 12px; }
+
+}
