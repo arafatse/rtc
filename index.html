@@ -176,11 +176,19 @@
 		</section>
 	<script type="text/javascript">
 		var listTitle = document.getElementsByClassName('listTitle');
-		for(var i = 1; i<listTitle.length; i++){
-			console.log(listTitle[i]);
-		}
+		var menuStatus = false;
 		function openlist(e) {
-			e.nextElementSibling.style.display = "block";
+			if(!menuStatus)
+				{
+					e.nextElementSibling.style.display = "block";
+					menuStatus = true
+				}
+			else
+			{
+				e.nextElementSibling.style.display = "none";
+				menuStatus = false;
+
+			}
 			console.log("display")
 		}
 	</script>
