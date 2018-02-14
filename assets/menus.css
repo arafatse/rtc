@@ -13,13 +13,13 @@ body { height:999px;color: #777; font-size: 16px; font-family: sans-serif; margi
 h1 { margin: 0px 0px 1em 0px; color: #076d6f; font-size: 1.7em; }
 h3 { margin: 0px 0px 1.5em 0px; color: #339999; font-size: 1.1em; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
 a { color: #00aaff; text-decoration: none; }
-header { height: 260px; background: #eee url(banner.jpg) no-repeat center; background-size: cover; margin-bottom: 50px; position: relative; }
-header a.logo { display: inline-block; background: /*url("../assets/logo.png")*/ no-repeat 0 0; background-size: contain; z-index: 1; top: 27px; right: 20px; }
-header a.logo span {font-size: 2em; font-weight: bolder; line-height: .5; letter-spacing: 1px;text-transform: uppercase; color: #fff; font-family: tahoma}
-article { width: 70%; float: right; margin-bottom: 75px; }
-article div { padding: 0px 40px 0px 40px; border-left: 1px solid #555; }
-aside { width: 30%; float: right; }
-aside div { padding: 0px 40px 0px 40px; }
+body > header { height: 260px; background: #eee url(banner.jpg) no-repeat center; background-size: cover; margin-bottom: 50px; position: relative; }
+body > header a.logo { display: inline-block; background: /*url("../assets/logo.png")*/ no-repeat 0 0; background-size: contain; z-index: 1; top: 27px; right: 20px; }
+body > header a.logo span {font-size: 2em; font-weight: bolder; line-height: .5; letter-spacing: 1px;text-transform: uppercase; color: #fff; font-family: tahoma}
+body > article { width: 70%; float: right; margin-bottom: 75px; }
+body > article div { padding: 0px 40px 0px 40px; border-left: 1px solid #555; }
+body > aside { width: 30%; float: right; }
+body > aside div { padding: 0px 40px 0px 40px; }
 nav { background-color: rgba(0,0,0,.6); padding: 30px 10px 30px 0px;}
 /* Add menu rules here */
 nav ul { list-style-type: none; margin: 0; padding: 0;display: inline-block; position: relative;}
@@ -35,23 +35,16 @@ nav ul ul ul { right: 100%; top: 0; }
 nav > ul { padding-right: 35px; }
 nav > ul > li { float: right; background: rgba(0,0,0,.6); margin: 0px 10px}
 nav > ul > li > a { padding: 10px 20px 15px 20px; width:auto; text-shadow: 1px 1px 2px #333}
-.donate,
-.valunteer{
-float:left;
-padding:15px;
-margin-left:20px;
+
+.departments {
+	padding:75px 0;
+	background-attachment: fixed;
+	user-select: none;
+	text-align:center;
+	background-size:cover;
+	background-image:url("http://resala.org/sites/default/files/public/cover%20site%201%20%282%29_1.jpg");
+	position: relative;
 }
-.donate{background-color: rgba(102,0,0,.8);}
-.valunteer{background-color: rgba(0,0,102,.8);}
-.donate a,
-.valunteer a{
-color:#ccc;
-font-weight: bold;
-letter-spacing: 1px
-}
-	
-.departments {height: 50vh;
-	background-attachment: fixed; user-select: none; text-align:center; background-size:cover; background-image:url("http://resala.org/sites/default/files/public/cover%20site%201%20%282%29_1.jpg");padding: 60px 0; position: relative;}
 
 .departments::after {
 	content: "";
@@ -65,92 +58,138 @@ letter-spacing: 1px
 	z-index: 1;
 }
 .departments .container{
-
 	position: relative;
 	z-index: 2;
 }
-.departments h2{ margin: 0 auto 2em auto ; padding:20px ;border-bottom:5px solid rgba(40,40,100,.8);width:200px; color:#fff; text-shadow: 1px 2px 0px #333}
-.departments > .container > div {
-	display: inline-block;
+
+.departments h2{
+	margin: 0 auto 3em auto;
+	padding:20px;
+	/* border-bottom:5px solid rgba(40,40,100,1); */
+	/* width:200px; */
+	color:#fff;
+	text-shadow: 1px 2px 0px #333;
+}
+
+.departments > .container > div
+{
+	display:inline-block;
 	background-color: rgba(0,0,0,.9);
 	color: #fff;
-	padding:30px 60px;
-	width:160px;
+	padding: 30px 60px;
+	width: 160px;
 	margin: 10px 20px;
 	cursor: pointer;
 }
+
 .departments .computer{
-border-bottom:5px solid  #f69b13;
+	border-bottom:5px solid  #d71438;
 }
 .departments .hd{
-border-bottom:5px solid  #d71438;
+	border-bottom:5px solid  #f69b13;
 }
 .departments .lang{
-border-bottom:5px solid  #2cc029;
-}
-.coursetable{
-background-color:#eee;
-padding:40px 0;
-color:#333;
+	border-bottom:5px solid  #2cc029;
 }
 
-.coursetable .course:nth-child(1){
-padding-right: 20px;
-border-right:5px solid #d71438;
-}
-.coursetable .course:nth-child(2){
-padding-right: 20px;
-border-right:5px solid #f69b13;
-}
-.coursetable .course:nth-child(3){
-padding-right: 20px;
-border-right:5px solid #d71438;
-}
-.coursetable .course h4{
-background-color: #399;
-position: relative;
-left:20px;
-margin-bottom: 5px;
+#myInput{
+border:none;
 padding:10px;
-color:#fff;
-text-shadow: 1px 1px 1px #333
 }
-.coursetable .entryLevel,
-.coursetable .intermediateLevel,
-.coursetable .advancedLevel{
-font-size: .8em;
-text-shadow: none;
-background-color: #333;
-padding:6px 10px;
+
+.coursetable{
+	background-color:#eee;
+	padding:20px 0;
 }
-.entryLevel{ color: gold }
-.intermediateLevel{ color: #f41717; }
-.advancedLevel{ color: #6c6cff; }
-.coursetable .status1{color: green; }
-.coursetable .status2{color: blue; }
-.coursetable .status3{color: red; }
-.coursetable .listTitle {
-padding:5px 10px;
-border-right: 3px solid #399;
-display: inline-block;
-margin-top: 25px;
-cursor: pointer;
-background-color:#fff;
+.coursetable .course{
 }
-.coursetable ul {
-list-style: none;
-display: none;
+.coursetable .course.computerfilter{
+	border-right: 5px solid #d71438;
 }
-.coursetable ul li {
-border-right: 3px solid #444;
-padding-right: 10px;
-margin: 5px 0;
+.coursetable .course.hdfilter{
+	border-right: 5px solid #f69b13;
+}.coursetable .course.langfilter{
+	border-right: 5px solid #2cc029;
 }
+
+.coursetable .course h4{
+	background-color: #399;
+	color:#fff;
+	text-shadow: 1px 1px 1px #333;
+	margin-bottom:8px;
+	padding:10px;
+}
+
+.coursetable .course h4 span{
+	display:inline-block;
+	background-color: #333;
+	padding:5px;
+	font-size:.8em
+}
+
+.coursetable .time{
+	margin-right: 20px;
+	color: #333
+}
+
+.coursetable .status{
+	color: red
+}
+.coursetable .level1{
+color: gold
+}
+.coursetable .level2{
+color: #6c6cff
+}
+.coursetable .level3{
+color: #dd1919
+}
+.coursetable .course span.myDropdown {
+	display:inline-block;
+	background-color: #fff;
+	padding: 6px 10px;
+	font-weight:bold;
+	color: #222;
+	border-right:5px solid #399;
+	cursor: pointer;
+	user-select: none;
+}
+
+.coursetable .course .courseContent{
+	margin-top:50px;
+}
+.coursetable .course .courseContent,
+.coursetable .course .requires{
+	margin-right:20px;
+	margin-bottom:20px;
+	position:relative;
+}
+/* .coursetable .course .courseContent:after,
+.coursetable .course .requires:after{
+	content:"";
+	display:inline-block;
+	border: 10px solid transparent;
+	height:0;
+	width:0;
+	border-top-color:red;
+	position: absolute;
+top:100%;
+right:100px;
+} */
+.coursetable .course ul{display:none;color:#333}
+
+.coursetable .course ul li{
+list-style-type: none;
+border-right: 3px solid #333;
+padding-right:10px;
+margin-bottom: 5px;
+}
+
 @media screen and (max-width: 750px) {
-header a.logo { width: 120px; height: 44px; }
-article { width: 100%; float: none; margin-bottom: 40px; }
-article div { margin: 0px 40px; padding: 0px 0px 30px 0px; border-left: none; border-bottom: 1px solid #555; }
-aside { width: 100%; float: none; }
+body > header a.logo { width: 120px; height: 44px; }
+body > article { width: 100%; float: none; margin-bottom: 40px; }
+body > article div { margin: 0px 40px; padding: 0px 0px 30px 0px; border-left: none; border-bottom: 1px solid #555; }
+body > aside { width: 100%; float: none; }
 nav { padding: 70px 0 0 10px; }
 nav > ul {padding-left: 0; padding-right: :20px; }
 nav > ul > li > a { padding: 8px 12px 10px 12px; }
