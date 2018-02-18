@@ -1,3 +1,5 @@
+
+
 function isComputer() {
   var course = document.getElementsByClassName('course');
   for (var i = 0; i < course.length; i++) {
