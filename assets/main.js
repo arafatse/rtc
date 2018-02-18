@@ -7,6 +7,8 @@ function isComputer() {
       course[i].style.display = "none";
     }
   }
+  myInput.scrollIntoView();
+
 }
 function isLang() {
   var course = document.getElementsByClassName('course');
@@ -17,6 +19,8 @@ function isLang() {
       course[i].style.display = "none";
     }
   }
+  myInput.scrollIntoView();
+
 }
 
 function isHd() {
@@ -28,6 +32,7 @@ function isHd() {
       course[i].style.display = "none";
     }
   }
+  myInput.scrollIntoView();
 }
 
 
@@ -36,27 +41,48 @@ function isHd() {
     function openlist(e) {
       if (!menuStatus) {
         e.nextElementSibling.style.display = "block";
+        e.getElementsByTagName('i')[0].style.transform = "rotate(180deg)";
         menuStatus = true;
       } else {
         e.nextElementSibling.style.display = "none";
+        e.getElementsByTagName('i')[0].style.transform = "rotate(0deg)";
+
         menuStatus = false;
       }
     }
 
     function mySearch() {
       var input, filter, table, tr, td, i;
+      var count = 1;
       input = document.getElementById("myInput");
       filter = input.value.toUpperCase();
       table = document.getElementById("coursetable");
-      tr = table.getElementsByClassName("course");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("h4")[0];
-        if (td) {
-          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "block";
+      courses = table.getElementsByClassName("course");
+      for (i = 0; i < courses.length; i++) {
+        course = courses[i].getElementsByTagName("h4")[0];
+        if (course) {
+          if (course.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            courses[i].style.display = "block";
+            count = 0;
           } else {
-            tr[i].style.display = "none";
+            courses[i].style.display = "none";
           }
         }
       }
+      if (count){
+        document.getElementById('noResult').innerHTML = "<br><br>\
+عفواَ هذا الكورس غير متوفر الان ";
+      }
+      else{
+        document.getElementById('noResult').innerHTML = "";
+
+}
+    }
+    function seeAll() {
+      var table, tr, td, i;
+      table = document.getElementById("coursetable");
+      courses = table.getElementsByClassName("course");
+      for (i = 0; i < courses.length; i++) {
+        courses[i].style.display = "block";
+        }
     }

@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <title>RTC Nasr City</title>
   <link rel="stylesheet" type="text/css" href="assets/menus.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,15 +24,15 @@
         <li><a href="#" aria-haspopup="true">تواصل معنا</a>
           <ul>
             <!-- sublink -->
-            <li><a href="#">مواقع التواصل</a></li>
-            <li><a href="#"><address style="direction: ltr">+201010054383</address></a></li>
+            <li><a href="www.fb.com/rtcnasrcity">مواقع التواصل</a></li>
+            <li><a href="#"><address style="direction: ltr">+20101234567</address></a></li>
           </ul>
         </li>
-        <li><a href="#">دوراتنا</a>
+        <li><a href="#courseButtons" onclick="seeAll()">دوراتنا</a>
           <ul>
             <!-- sublink  -->
-            <li><a href="#">كمبيوتر</a></li>
-            <li><a href="#" aria-haspopup="true">لــغات</a>
+            <li><a href="#courseButtons" onclick="isComputer()">كمبيوتر</a></li>
+            <li><a href="#courseButtons" onclick="isLang()" aria-haspopup="true">لــغات</a>
               <ul>
                 <!-- sub sublinks  -->
                 <li><a href="#">انجليزي</a></li>
@@ -39,10 +40,10 @@
                 <li><a href="#">تركي</a></li>
               </ul>
             </li>
-            <li><a href="#">تنميه</a></li>
+            <li><a href="#courseButtons" onclick="isHd()">تنميه</a></li>
           </ul>
         </li>
-        <li><a href="#"> من نحن؟</a></li>
+        <li><a href="#introduction"> من نحن؟</a></li>
       </ul>
       <!-- end page links -->
 
@@ -54,7 +55,7 @@
 
   <!-- introduction article -->
   <article>
-    <div>
+    <div id="introduction">
       <h1> R<small>esala</small> T<small>rainng</small> C<small>enter</small> <br> مــــركز رســـالة للتدريب</h1>
       <p>مراكز رساله للتدريب إحدى انشطة جميعة رسالة الذي بدأت منذ نشأتها عام 2000 و تستهدف تنمية شرائح المجتمع المختلفة من خلال تقديم الدورات التدريبية المجانية و فرص التطوع فى مجالات
         <a href="#">الكمبيوتر</a>, <a href="#">اللغات</a>,<a href="#"> التنمية البشرية و الإدارية</a>, و <a href="#">الأشبال</a> تتميز مراكز رسالة للتدريب بتوفير فرص لتوظيف المتدربين بالتعاون مع كبرى شركات التدريب و التوظيف, كما تتيح فرص العمل التطوعي
@@ -77,7 +78,7 @@
   <div class="clearfix"></div>
 
   <!-- start Departments -->
-  <section class="departments">f
+  <section class="departments" id="courseButtons">f
     <div class="container">
 
       <h2>الــدورات \ Courses</h2>
@@ -93,8 +94,14 @@
   <!-- start course table -->
   <section id="coursetable" class="coursetable">
     <div class="container">
-    <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search for Course.." title="Type in a name">
 
+    <button type="button" name="search" class="fas fa-search" onclick=""></button>
+    <input dir="ltr" type="text" id="myInput" onkeyup="mySearch()" placeholder=" Search for Course.." title="Type in a name">
+    or
+    <button type="button" onclick="seeAll()">See All</button>
+    <div id="noResult">
+
+    </div>
       <!-- start course details -->
       <div class="course computerfilter">
 
@@ -112,7 +119,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -124,7 +134,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -151,7 +164,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -163,7 +179,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -188,7 +207,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -200,7 +222,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -226,7 +251,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -238,7 +266,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -263,7 +294,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -275,7 +309,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -300,7 +337,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -312,7 +352,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -337,7 +380,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -349,7 +395,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -374,7 +423,10 @@
 
         <!-- start course contant -->
         <div class="courseContent">
-          <span class="myDropdown" onclick="openlist(this)">محتويات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            محتويات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
             <li><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</li>
@@ -386,7 +438,10 @@
 
         <!-- start course requerements -->
         <div class="requires">
-          <span class="myDropdown" onclick="openlist(this)">متطلبات الكورس</span>
+          <span class="myDropdown" onclick="openlist(this)">
+            متطلبات الكورس
+            <i class="fas fa-angle-down"></i>
+          </span>
           <ul>
             <li>القدرة على استخدمام الكمبيوتر </li>
             <li>استخدام الانترنت وتحميل وتثبيت البرامج</li>
@@ -402,9 +457,7 @@
   <footer>
 
   </footer>
-  <script src="assets/main.js" type="text/javascript">
-
-  </script>
+  <script src="assets/main.js" type="text/javascript"></script>
 
 </body>
 

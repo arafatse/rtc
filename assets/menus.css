@@ -9,7 +9,7 @@ margin:auto;
 p{
 	font-size:18px;
 }
-body { height:999px;color: #777; font-size: 16px; font-family: sans-serif; margin: 0; padding: 0; direction: rtl}
+body {height:999px;color: #777; font-size: 16px; font-family: sans-serif; margin: 0; padding: 0; direction: rtl}
 h1 { margin: 0px 0px 1em 0px; color: #076d6f; font-size: 1.7em; }
 h3 { margin: 0px 0px 1.5em 0px; color: #339999; font-size: 1.1em; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
 a { color: #00aaff; text-decoration: none; }
@@ -92,6 +92,11 @@ nav > ul > li > a { padding: 10px 20px 15px 20px; width:auto; text-shadow: 1px 1
 	border-bottom:5px solid  #2cc029;
 }
 
+button{
+	padding:10px;
+	margin-left: -3px
+}
+
 #myInput{
 border:none;
 padding:10px;
@@ -100,6 +105,18 @@ padding:10px;
 .coursetable{
 	background-color:#eee;
 	padding:20px 0;
+	min-height: 100vh;
+}
+.coursetable button{
+	border: 0;
+	padding: 10px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #333;
+	letter-spacing: 1px;
+	background-color: rgba(102, 102, 102, 1);
+	cursor: pointer;
+
 }
 .coursetable .course{
 }
@@ -145,6 +162,7 @@ color: #6c6cff
 color: #dd1919
 }
 .coursetable .course span.myDropdown {
+	position: relative;
 	display:inline-block;
 	background-color: #fff;
 	padding: 6px 10px;
@@ -154,7 +172,10 @@ color: #dd1919
 	cursor: pointer;
 	user-select: none;
 }
-
+.coursetable .course span.myDropdown >i{
+	position: relative;
+	top:3px;
+}
 .coursetable .course .courseContent{
 	margin-top:50px;
 }
@@ -187,10 +208,13 @@ margin-bottom: 5px;
 
 @media screen and (max-width: 750px) {
 body > header a.logo { width: 120px; height: 44px; }
-body > article { width: 100%; float: none; margin-bottom: 40px; }
+body > article { width: 100%; float: none; margin-bottom: 40px }
 body > article div { margin: 0px 40px; padding: 0px 0px 30px 0px; border-left: none; border-bottom: 1px solid #555; }
 body > aside { width: 100%; float: none; }
 nav { padding: 70px 0 0 10px; }
 nav > ul {padding-left: 0; padding-right: :20px; }
 nav > ul > li > a { padding: 8px 12px 10px 12px; }
+article {
+	text-align: justify;
+	}
 }
