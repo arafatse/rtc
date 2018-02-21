@@ -1,7 +1,8 @@
 
+courseTable = document.getElementById('coursetable');
 
+var course = document.getElementsByClassName('course');
 function isComputer() {
-  var course = document.getElementsByClassName('course');
   for (var i = 0; i < course.length; i++) {
     if (course[i].classList.value.indexOf("computerfilter") > -1) {
       course[i].style.display = "block";
@@ -9,11 +10,9 @@ function isComputer() {
       course[i].style.display = "none";
     }
   }
-  myInput.scrollIntoView();
-
+  courseTable.scrollIntoView({behavior:"smooth"});
 }
 function isLang() {
-  var course = document.getElementsByClassName('course');
   for (var i = 0; i < course.length; i++) {
     if (course[i].classList.value.indexOf("langfilter") > -1) {
       course[i].style.display = "block";
@@ -21,12 +20,11 @@ function isLang() {
       course[i].style.display = "none";
     }
   }
-  myInput.scrollIntoView();
+  courseTable.scrollIntoView({behavior:"smooth"});
 
 }
 
 function isHd() {
-  var course = document.getElementsByClassName('course');
   for (var i = 0; i < course.length; i++) {
     if (course[i].classList.value.indexOf("hdfilter") > -1) {
       course[i].style.display = "block";
@@ -34,7 +32,7 @@ function isHd() {
       course[i].style.display = "none";
     }
   }
-  myInput.scrollIntoView();
+  window.scroll({top:1150, left:0, behavior:"smooth"});
 }
 
 

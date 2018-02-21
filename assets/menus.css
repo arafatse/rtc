@@ -104,7 +104,7 @@ padding:10px;
 
 .coursetable{
 	background-color:#eee;
-	padding:20px 0;
+	padding:30px 0;
 	min-height: 100vh;
 }
 .coursetable button{
@@ -217,4 +217,18 @@ nav > ul > li > a { padding: 8px 12px 10px 12px; }
 article {
 	text-align: justify;
 	}
+}
+.modal{
+
+	position: absolute;
+	top:100%;
+	right:0;
+	width:200px;
+	text-align: left;
+	padding:20px;
+	height: 100px;
+	background-color: rgba(0, 102, 102, 0.6);
+	color: #fff;
+	text-shadow: 1px 1px 1px #333;
+	letter-spacing:1px;
 }
