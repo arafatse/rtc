@@ -211,24 +211,10 @@ body > header a.logo { width: 120px; height: 44px; }
 body > article { width: 100%; float: none; margin-bottom: 40px }
 body > article div { margin: 0px 40px; padding: 0px 0px 30px 0px; border-left: none; border-bottom: 1px solid #555; }
 body > aside { width: 100%; float: none; }
-nav { padding: 70px 0 0 10px; }
+nav { padding: 70px 0 0 10px; position:fixed}
 nav > ul {padding-left: 0; padding-right: :20px; }
 nav > ul > li > a { padding: 8px 12px 10px 12px; }
 article {
 	text-align: justify;
 	}
-}
-.modal{
-
-	position: absolute;
-	top:100%;
-	right:0;
-	width:200px;
-	text-align: left;
-	padding:20px;
-	height: 100px;
-	background-color: rgba(0, 102, 102, 0.6);
-	color: #fff;
-	text-shadow: 1px 1px 1px #333;
-	letter-spacing:1px;
 }

@@ -10,7 +10,7 @@ function isComputer() {
       course[i].style.display = "none";
     }
   }
-  courseTable.scrollIntoView({behavior:"smooth"});
+  window.scroll({top:1150, left:0, behavior:"smooth"});
 }
 function isLang() {
   for (var i = 0; i < course.length; i++) {
@@ -20,7 +20,7 @@ function isLang() {
       course[i].style.display = "none";
     }
   }
-  courseTable.scrollIntoView({behavior:"smooth"});
+  window.scroll({top:1150, left:0, behavior:"smooth"});
 
 }
 
@@ -82,7 +82,9 @@ function isHd() {
       var table, tr, td, i;
       table = document.getElementById("coursetable");
       courses = table.getElementsByClassName("course");
+      window.scroll({top:1215, left:0, behavior:"smooth"});
       for (i = 0; i < courses.length; i++) {
         courses[i].style.display = "block";
+        courses[i].style.opacity = 1;
         }
     }
